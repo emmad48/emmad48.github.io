@@ -1,7 +1,180 @@
 <!DOCTYPE html>
-<html>
-<body>
-<h1>Hello World</h1>
-<p>I'm hosted with GitHub Pages.</p>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emma Dinowitz - Mathematics</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600&family=Source+Serif+Pro:wght@400;600&display=swap');
+        
+        :root {
+            --primary-color: #2C3E50;
+            --accent-color: #3498DB;
+            --background-color: #F8FAFC;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', sans-serif;
+            background: var(--background-color);
+            position: relative;
+        }
+
+        body::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 400px;
+            background: linear-gradient(135deg, #2C3E50 0%, #3498DB 100%);
+            z-index: 0;
+            clip-path: polygon(0 0, 100% 0, 100% 75%, 0 100%);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Source Serif Pro', serif;
+        }
+
+        .nav-link {
+            position: relative;
+            padding-bottom: 2px;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--accent-color);
+            transition: width 0.3s ease;
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        .section-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .section-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        .grid-pattern {
+            background-image: radial-gradient(#3498DB 1px, transparent 1px);
+            background-size: 20px 20px;
+            opacity: 0.1;
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+    <div class="relative">
+        <nav class="relative z-10">
+            <div class="max-w-5xl mx-auto px-6 py-6">
+                <div class="flex justify-between items-center">
+                    <span class="text-2xl font-semibold text-white">Emma Dinowitz</span>
+                    <div class="space-x-8">
+                        <a href="#research" class="nav-link text-white hover:text-blue-200">Research</a>
+                        <a href="#teaching" class="nav-link text-white hover:text-blue-200">Teaching</a>
+                        <a href="#contact" class="nav-link text-white hover:text-blue-200">Contact</a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <main class="relative z-10 max-w-5xl mx-auto px-6 py-12">
+            <section class="mb-16">
+                <div class="bg-white rounded-lg p-8 shadow-lg">
+                    <h1 class="text-4xl font-bold mb-6 text-gray-800">Mathematical Research & Education</h1>
+                    <p class="text-xl leading-relaxed text-gray-600">
+                        PhD candidate in Mathematics at CUNY Graduate Center, focusing on dynamical systems, computability theory, and metric geometry. My research explores the intersection of nonuniformly hyperbolic dynamics and symbolic dynamics, while contributing to mathematical education through teaching and mentorship.
+                    </p>
+                </div>
+            </section>
+
+            <section id="research" class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 text-gray-800">Research Areas</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="section-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="h-2 bg-blue-500 rounded-t-lg mb-4"></div>
+                        <h3 class="text-xl font-semibold mb-3">Dynamical Systems</h3>
+                        <p class="text-gray-600">Current research in nonuniformly hyperbolic dynamics, symbolic dynamics, and algorithmic complexity theory. Investigating computational aspects of dynamical systems.</p>
+                        <div class="mt-4 text-sm text-gray-500">2023-Present</div>
+                    </div>
+                    <div class="section-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="h-2 bg-green-500 rounded-t-lg mb-4"></div>
+                        <h3 class="text-xl font-semibold mb-3">Computability Theory</h3>
+                        <p class="text-gray-600">Research in degree theory, computable structure theory, with emphasis on priority arguments and infinitary logic applications.</p>
+                        <div class="mt-4 text-sm text-gray-500">2020-2022</div>
+                    </div>
+                    <div class="section-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="h-2 bg-purple-500 rounded-t-lg mb-4"></div>
+                        <h3 class="text-xl font-semibold mb-3">Metric Geometry</h3>
+                        <p class="text-gray-600">Contributed to research on Smocked Metric Spaces and their Tangent Cones, collaborating with Prof. Christina Sormani and Dr. Demetre Kazaras.</p>
+                        <div class="mt-4 text-sm text-gray-500">2019-2020</div>
+                    </div>
+                    <div class="section-card bg-white p-6 rounded-lg shadow-md">
+                        <div class="h-2 bg-yellow-500 rounded-t-lg mb-4"></div>
+                        <h3 class="text-xl font-semibold mb-3">Economic Modeling</h3>
+                        <p class="text-gray-600">Applied mathematical modeling to economic systems, utilizing MAPLE for market shock simulations and linear algebra for model construction.</p>
+                        <div class="mt-4 text-sm text-gray-500">2021-2022</div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="teaching" class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 text-gray-800">Teaching Experience</h2>
+                <div class="section-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Brooklyn College</h3>
+                            <div class="space-y-2 text-gray-600">
+                                <p>• College Algebra</p>
+                                <p>• Linear Algebra</p>
+                                <p>• Thinking Mathematically</p>
+                            </div>
+                            <div class="mt-4 text-sm text-gray-500">2022-2024</div>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Hunter College</h3>
+                            <div class="space-y-2 text-gray-600">
+                                <p>• College Algebra</p>
+                                <p>• Precalculus</p>
+                                <p>• Calculus I & II</p>
+                            </div>
+                            <div class="mt-4 text-sm text-gray-500">2019-2022</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="contact" class="mb-16">
+                <h2 class="text-3xl font-bold mb-8 text-gray-800">Contact Information</h2>
+                <div class="section-card bg-white p-8 rounded-lg shadow-md">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Email</h3>
+                            <p class="text-gray-600">emmad4867@gmail.com</p>
+                        </div>
+                        <div>
+                            <h3 class="text-xl font-semibold mb-4 text-blue-600">Institution</h3>
+                            <p class="text-gray-600">CUNY Graduate Center<br>Mathematics Department</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="relative z-10 bg-gray-100 mt-16">
+            <div class="max-w-5xl mx-auto px-6 py-8 text-center text-gray-600">
+                <p>© 2024 Emma Dinowitz | Mathematics PhD Candidate</p>
+            </div>
+        </footer>
+    </div>
 </body>
 </html>
